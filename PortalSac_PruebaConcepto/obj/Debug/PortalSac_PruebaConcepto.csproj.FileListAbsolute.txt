@@ -1,0 +1,12 @@
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\obj\Debug\PortalSac_PruebaConcepto.csprojAssemblyReference.cache
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\obj\Debug\PortalSac_PruebaConcepto.csproj.CoreCompileInputs.cache
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\bin\Debug\PortalSac_PruebaConcepto.exe.config
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\bin\Debug\PortalSac_PruebaConcepto.exe
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\bin\Debug\PortalSac_PruebaConcepto.pdb
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\bin\Debug\Newtonsoft.Json.dll
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\bin\Debug\Release.Helper.dll
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\bin\Debug\System.Net.Http.Formatting.dll
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\bin\Debug\Newtonsoft.Json.xml
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\obj\Debug\PortalSac_PruebaConcepto.csproj.CopyComplete
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\obj\Debug\PortalSac_PruebaConcepto.exe
+D:\FALABELLA\Git\portalsac_back\PortalSac_PruebaConcepto\obj\Debug\PortalSac_PruebaConcepto.pdb
