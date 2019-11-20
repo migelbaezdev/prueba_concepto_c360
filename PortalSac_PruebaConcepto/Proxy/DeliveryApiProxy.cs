@@ -21,9 +21,10 @@ namespace FalabellaPE.PortalSAC.Console.Proxy
 
       
 
-        public CommandResponse ActualizarEstado(string request)
+        public CommandResponse ActualizarEstado(object request)
         {
-            var cr = this.CallWebApi<CommandResponse>(HttpMethod.Post, this._url + "/ExternalEntrega/actualizarEstado", request, timeout: 500);
+            var reqJson = Newtonsoft.Json.JsonConvert.SerializeObject(request);
+            var cr = this.CallWebApi<CommandResponse>(HttpMethod.Post, this._url + "/CommandEntrega/actualizarEstado", reqJson, timeout: 500);
 
             return cr;
         }
