@@ -25,7 +25,7 @@ namespace PortalSac.APIClient
 
     public RestClient() { }
 
-    public object get(string resource, Dictionary<string, string> data)
+    public object get(string resource, object data)
     {
       return this.executeRequest(this.createRequest(resource, "GET", data));
     }
@@ -35,10 +35,7 @@ namespace PortalSac.APIClient
       return this.executeRequest(this.createRequest(resource, "POST", data));
     }
 
-    public object delete(string resource, Dictionary<string, string> data)
-    {
-      return this.executeRequest(this.createRequest(resource, "DELETE", data));
-    }
+
 
     private HttpWebRequest createRequest(
       string resource,
@@ -50,7 +47,7 @@ namespace PortalSac.APIClient
       request.KeepAlive = false;
       request.ServicePoint.Expect100Continue = false;
       this.setAuthorizationHeader(request);
-      request.ContentType = "text/json";
+      request.ContentType = "application/json; charset=utf-8";
       if (data != null)
         this.setJsonToRequest(this.dataToString(data), request.GetRequestStream());
       return request;
@@ -61,7 +58,7 @@ namespace PortalSac.APIClient
       string str = RestClient.EncodeTo64(this.User + ":" + this.Token);
       request.Headers["Authorization"] = "Basic " + str;
       request.Headers["X-API-Source"] = this.version;
-    }
+        }
 
     protected static string EncodeTo64(string toEncode)
     {

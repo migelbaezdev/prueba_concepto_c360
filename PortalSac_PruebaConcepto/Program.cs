@@ -31,6 +31,19 @@ namespace PortalSac_PruebaConcepto
             };
 
             object obj1 = new RestClient().post("ExternalEntrega/actualizarEstado/", request);
+
+
+
+            var request2 = new
+            {
+                Page = 1,
+                PageSize = 10,
+                estado_id = 1,
+                courier_id = 1,
+                fechaCreacion = "2019-11-20"
+            };
+
+            object obj2 = new RestClient().post("ExternalEntrega/busquedaPaginada/", request2);
         }
     }
 }
