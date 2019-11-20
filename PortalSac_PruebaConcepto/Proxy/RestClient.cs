@@ -30,7 +30,7 @@ namespace PortalSac.APIClient
       return this.executeRequest(this.createRequest(resource, "GET", data));
     }
 
-    public object post(string resource, Dictionary<string, string> data)
+    public object post(string resource, object data)
     {
       return this.executeRequest(this.createRequest(resource, "POST", data));
     }
@@ -43,7 +43,7 @@ namespace PortalSac.APIClient
     private HttpWebRequest createRequest(
       string resource,
       string method,
-      Dictionary<string, string> data)
+      object data)
     {
       HttpWebRequest request = (HttpWebRequest) WebRequest.Create(this.URL + resource);
       request.Method = method;
@@ -86,7 +86,7 @@ namespace PortalSac.APIClient
       return new JavaScriptSerializer().Deserialize<object>(body);
     }
 
-    protected string dataToString(Dictionary<string, string> data)
+    protected string dataToString(object data)
     {
       StringBuilder output = new StringBuilder();
       new JavaScriptSerializer().Serialize((object) data, output);
