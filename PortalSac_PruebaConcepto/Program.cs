@@ -1,9 +1,10 @@
-﻿using System;
+﻿using PortalSac.APIClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using FalabellaPE.PortalSAC.Console.Proxy;
 
 namespace PortalSac_PruebaConcepto
 {
@@ -11,22 +12,24 @@ namespace PortalSac_PruebaConcepto
     {
         static void Main(string[] args)
         {
-            var url = " https://falabellape-portalsacapi.azurewebsites.net";
-            var request = new
-            {
-                fechaCreacion = "2019-11-11T15:00:00Z",
-                folio = 12782513531,
-                courier = new
-                {
-                    id = 1
-                },
-                motivo = new
-                {
-                    id = 17
-                },
-                ubicacion = "1258474854,-188212225"
-            };
-            new DeliveryApiProxy(url).ActualizarEstado(request);
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+
+            var request =
+
+            new Dictionary<string, string>()
+      {
+        {
+          "fechaCreacion",
+          "2019-11-11T15:00:00Z"
+        },
+        {
+          "folio",
+          "12782513531"
+        }
+      };
+
+            object obj1 = new RestClient().post("ExternalEntrega/actualizarEstado/", request);
         }
     }
 }
